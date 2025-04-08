@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understand Math Visually: Area & Perimeter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Understand Math Visually: Area & Perimeter</h1>
+        <p>Interactive visualizations to help you understand why geometric formulas work</p>
+    </header>
+
+    <nav>
+        <button class="nav-button active" data-module="square">Square</button>
+        <button class="nav-button" data-module="rectangle">Rectangle</button>
+        <button class="nav-button" data-module="circle">Circle</button>
+    </nav>
+
+    <main>
+        <!-- Square Module -->
+        <section id="square" class="module active">
+            <h2>Understanding the Square</h2>
+            <p>A square has 4 equal sides and 4 right angles. Let's visualize how we calculate its area and perimeter.</p>
+            
+            <div class="controls">
+                <div class="slider-container">
+                    <label for="square-size">Side Length (s): <span id="square-size-value">5</span> units</label>
+                    <input type="range" id="square-size" min="1" max="10" value="5" step="1">
+                </div>
+                <div class="action-buttons">
+                    <button id="toggle-square-view">Show Area</button>
+                    <button id="reset-square">Reset</button>
+                </div>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="square-canvas" width="500" height="400"></canvas>
+            </div>
+            
+            <div class="explanation" id="square-explanation">
+                <h3>Perimeter of a Square</h3>
+                <p>The perimeter is the total distance around the square. Since all sides are equal, we add them together:</p>
+                <p>Perimeter = side + side + side + side = 4 × side</p>
+            </div>
+            
+            <div class="formula" id="square-formula">
+                P = 4s
+            </div>
+        </section>
+
+        <!-- Rectangle Module -->
+        <section id="rectangle" class="module">
+            <h2>Understanding the Rectangle</h2>
+            <p>A rectangle has 2 pairs of equal sides and 4 right angles. Let's visualize its area and perimeter.</p>
+            
+            <!-- Similar structure as square module, will be implemented next -->
+            <p>Coming soon...</p>
+        </section>
+
+        <!-- Circle Module -->
+        <section id="circle" class="module">
+            <h2>Understanding the Circle</h2>
+            <p>A circle is a shape where all points are the same distance from the center. Let's explore its circumference and area.</p>
+            
+            <!-- Similar structure as square module, will be implemented later -->
+            <p>Coming soon...</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
