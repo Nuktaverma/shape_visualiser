@@ -8,38 +8,126 @@
 </head>
 <body>
     <header>
-        <h1>Understand Math Visually: Area & Perimeter</h1>
-        <p>Interactive visualizations to help you understand why geometric formulas work</p>
+        <h1>Understand Math Visually</h1>
+        <p class="subtitle">Interactive visualizations to help you understand why geometric formulas work, not just memorize them</p>
     </header>
 
-    <nav>
-        <button class="nav-button active" data-module="square">Square</button>
-        <button class="nav-button" data-module="rectangle">Rectangle</button>
-        <button class="nav-button" data-module="circle">Circle</button>
-    </nav>
-
-    <main>
-        <!-- Square Module -->
-        
-
-        <!-- Rectangle Module -->
-        <section id="rectangle" class="module">
-            <h2>Understanding the Rectangle</h2>
-            <p>A rectangle has 2 pairs of equal sides and 4 right angles. Let's visualize its area and perimeter.</p>
-            
-            <!-- Similar structure as square module, will be implemented next -->
-            <p>Coming soon...</p>
+    <main class="container">
+        <section class="intro">
+            <h2>Why Visualize Math?</h2>
+            <p>
+                Understanding the "why" behind formulas is much more powerful than simply memorizing them. 
+                Our interactive visualizations break down geometric concepts step-by-step, 
+                helping you see exactly how area and perimeter formulas are derived.
+            </p>
+            <p>
+                Select a shape below to explore its properties through interactive demonstrations.
+            </p>
         </section>
 
-        <!-- Circle Module -->
-        <section id="circle" class="module">
-            <h2>Understanding the Circle</h2>
-            <p>A circle is a shape where all points are the same distance from the center. Let's explore its circumference and area.</p>
-            
-            <!-- Similar structure as square module, will be implemented later -->
-            <p>Coming soon...</p>
-        </section>
+        <div class="shape-grid">
+            <!-- Square Card -->
+            <a href="./square/square.html" class="shape-card">
+                <div class="shape-image">
+                    <svg viewBox="0 0 100 100">
+                        <rect x="10" y="10" width="80" height="80" fill="#e6f0ff" stroke="#3366cc" stroke-width="2"/>
+                        <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" fill="#3366cc" font-size="16">s</text>
+                    </svg>
+                </div>
+                <div class="shape-content">
+                    <h3 class="shape-title">Square</h3>
+                    <p class="shape-description">
+                        Explore how the formulas for a square's area and perimeter are derived through 
+                        interactive visualizations. Manipulate the square's dimensions and see the effects instantly.
+                    </p>
+                    <div class="shape-formulas">
+                        Area: A = s²<br>
+                        Perimeter: P = 4s
+                    </div>
+                    <div class="explore-btn">Explore Square</div>
+                </div>
+            </a>
+
+            <!-- Rectangle Card -->
+            <a href="./rectangle/rectangle.html" class="shape-card">
+                <div class="shape-image">
+                    <svg viewBox="0 0 100 100">
+                        <rect x="10" y="20" width="80" height="60" fill="#e6f0ff" stroke="#3366cc" stroke-width="2"/>
+                        <text x="50" y="50" text-anchor="middle" dominant-baseline="middle" fill="#3366cc" font-size="16">l × w</text>
+                        <text x="50" y="15" text-anchor="middle" dominant-baseline="middle" fill="#3366cc" font-size="12">w</text>
+                        <text x="5" y="50" text-anchor="middle" dominant-baseline="middle" fill="#3366cc" font-size="12">l</text>
+                    </svg>
+                </div>
+                <div class="shape-content">
+                    <h3 class="shape-title">Rectangle</h3>
+                    <p class="shape-description">
+                        Understand the relationship between length, width, area, and perimeter in rectangles. 
+                        See how changing dimensions affects both properties.
+                    </p>
+                    <div class="shape-formulas">
+                        Area: A = l × w<br>
+                        Perimeter: P = 2(l + w)
+                    </div>
+                    <div class="explore-btn">Explore Rectangle</div>
+                </div>
+            </a>
+
+            <!-- Circle Card -->
+            <a href="./circle/circle.html" class="shape-card">
+                <div class="shape-image">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="40" fill="#e6f0ff" stroke="#3366cc" stroke-width="2"/>
+                        <line x1="50" y1="50" x2="90" y2="50" stroke="#3366cc" stroke-width="1.5"/>
+                        <text x="70" y="45" text-anchor="middle" dominant-baseline="middle" fill="#3366cc" font-size="12">r</text>
+                    </svg>
+                    <span class="coming-soon">Coming Soon</span>
+                </div>
+                <div class="shape-content">
+                    <h3 class="shape-title">Circle</h3>
+                    <p class="shape-description">
+                        Discover how π relates to both the circumference and area of a circle through 
+                        interactive demonstrations that make these concepts intuitive.
+                    </p>
+                    <div class="shape-formulas">
+                        Area: A = πr²<br>
+                        Circumference: C = 2πr
+                    </div>
+                    <div class="explore-btn">Explore Circle</div>
+                </div>
+            </a>
+
+            <!-- Triangle Card -->
+            <a href="#" class="shape-card">
+                <div class="shape-image">
+                    <svg viewBox="0 0 100 100">
+                        <polygon points="50,10 10,80 90,80" fill="#e6f0ff" stroke="#3366cc" stroke-width="2"/>
+                        <line x1="50" y1="10" x2="50" y2="80" stroke="#3366cc" stroke-width="1" stroke-dasharray="4,2"/>
+                        <text x="55" y="45" text-anchor="start" dominant-baseline="middle" fill="#3366cc" font-size="12">h</text>
+                        <text x="50" y="85" text-anchor="middle" dominant-baseline="middle" fill="#3366cc" font-size="12">b</text>
+                    </svg>
+                    <span class="coming-soon">Coming Soon</span>
+                </div>
+                <div class="shape-content">
+                    <h3 class="shape-title">Triangle</h3>
+                    <p class="shape-description">
+                        Learn why a triangle's area is half the product of its base and height, and how 
+                        to calculate its perimeter with different side lengths.
+                    </p>
+                    <div class="shape-formulas">
+                        Area: A = ½bh<br>
+                        Perimeter: P = a + b + c
+                    </div>
+                    <div class="explore-btn">Explore Triangle</div>
+                </div>
+            </a>
+        </div>
     </main>
+
+    <footer>
+        <p>Created to help students understand geometry through visual learning</p>
+        <p>&copy; 2025 Math Visualization Project</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
